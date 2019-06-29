@@ -8,5 +8,13 @@ class ApplicationController < ActionController::Base
 			@current_user ||= session.user unless session.nil?
 		end
 
+		def create_session(user)
+			begin
+				token = SecureRandom.urlsafe_base64 + SecureRandom.urlsafe_base64 + SecureRandom.urlsafe_base64 + SecureRandom.urlsafe_base64
+				user.sessions.create(auth_token: token)
+				cookies.permanent[:auth_token] = token
+			end unless Session.find_by_auth_token( token )
+		end
+
 		helper_method :current_user
 end

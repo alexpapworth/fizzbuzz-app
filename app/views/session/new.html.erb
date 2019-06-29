@@ -1,0 +1,12 @@
+<%= form_tag session_create_path, method: :post, remote: true do |form| %>
+	<div class="error_messages">	</div>
+
+	<div class="field padding">
+		<%= label_tag :name %>
+		<%= text_field_tag :name, params[:name], autocomplete: "name" %>
+	</div>
+
+	<div class="action">
+		<%= submit_tag "Log In" %>
+	</div>
+<% end %>
