@@ -1,3 +1,4 @@
 class Number < ApplicationRecord
-	has_many :users, through: :favourite
+	has_many :favourites
+	has_many :users, through: :favourites
 end
