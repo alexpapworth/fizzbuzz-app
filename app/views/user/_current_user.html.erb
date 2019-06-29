@@ -1,0 +1,6 @@
+<% if @current_user.nil? %>
+  <%= link_to "Sign up", user_index_path, method: :post, remote: true, class: "sign-up" %>
+<% else %>
+  Hello <%= @current_user.name %>
+  <%= link_to "Log out", session_destroy_path, remote: true %>
+<% end %>

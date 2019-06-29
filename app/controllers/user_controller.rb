@@ -1,7 +1,9 @@
 class UserController < ApplicationController
-  def new
+  def create
   	@current_user = User.create(name: helpers.generate_username)
   	generate_token(@current_user)
+
+  	respond_to :js
   end
 
   private

@@ -4,7 +4,8 @@ class ApplicationController < ActionController::Base
 
 	private
 		def current_user
-			@current_user ||= Session.find_by_auth_token(cookies[:auth_token]).user if cookies[:auth_token]
+			session = Session.find_by_auth_token(cookies[:auth_token])
+			@current_user ||= session.user unless session.nil?
 		end
 
 		helper_method :current_user

@@ -13,11 +13,7 @@
     <header>
       <%= link_to "Fizzbuzz", root_path, class: "title" %>
       <div class="header-options">
-        <% if !@current_user.nil? %>
-          Hello <%= @current_user.name %>
-        <% else %>
-          <%= link_to "Sign up", new_user_path, class: "sign-up" %>
-        <% end %>
+        <%= render partial: "user/current_user", formats: "html" %>
       </div>
     </header>
       
