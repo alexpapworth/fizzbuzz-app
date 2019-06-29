@@ -11,10 +11,13 @@
 
   <body>
     <header>
-      <h1 class="title">Fizzbuzz</h1>
-      <% # link_to "Sign up", new_user_path %>
+      <%= link_to "Fizzbuzz", root_path, class: "title" %>
       <div class="header-options">
-        <a href="/user/create" class="sign-up">Sign up</a>
+        <% if !@current_user.nil? %>
+          Hello <%= @current_user.name %>
+        <% else %>
+          <%= link_to "Sign up", new_user_path, class: "sign-up" %>
+        <% end %>
       </div>
     </header>
       
