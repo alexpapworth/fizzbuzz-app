@@ -1,24 +1,17 @@
-# README
+# Fizzbuzz app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Usage
 
-Things you may want to cover:
+Clone this project.
 
-* Ruby version
+```ruby
+git clone git@github.com:alexpapworth/fizzbuzz-app.git
+```
 
-* System dependencies
+Run the database migrations and seed the database with Fizzbuzz results.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```ruby
+cd fizzbuzz-app
+rails db:migrate
+rails db:seed
+```
