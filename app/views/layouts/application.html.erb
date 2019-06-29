@@ -10,6 +10,20 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <h1 class="title">Fizzbuzz</h1>
+      <% # link_to "Sign up", new_user_path %>
+      <div class="header-options">
+        <a href="/user/create" class="sign-up">Sign up</a>
+      </div>
+    </header>
+      
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <footer>
+
+    </footer>
   </body>
 </html>

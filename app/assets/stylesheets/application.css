@@ -13,3 +13,71 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+ 	margin: 0;
+ 	font-family: Helvetica Neue, Arial, san-serif;
+}
+
+header {
+	width: 100%;
+	background-color: #eee;
+}
+
+.title {
+	display: inline-block;
+	padding: 20px;
+	margin: 0;
+}
+
+.header-options {
+	display: inline-block;
+	float: right;
+	padding: 25px 20px;
+}
+
+.sign-up {
+	font-size: 22px;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* --- Index --- */
+
+.grid-table {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.row {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.row:nth-child(even) {
+	background-color: #eee;
+}
+
+.row:nth-child(odd) {
+	background-color: #ddd;
+}
+
+.row:hover {
+	background-color: #bbb;
+}
+
+.header {
+	font-weight: 700;
+	padding: 10px 5px;
+	text-align: center;
+}
+
+.cell {
+	text-align: center;
+	border: 1px solid #ccc;
+	padding: 5px;
+}

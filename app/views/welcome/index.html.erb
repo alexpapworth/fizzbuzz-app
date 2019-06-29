@@ -1,0 +1,16 @@
+<h2>Numbers</h2>
+
+<div class="grid-table">
+	<div class="row">
+		<div class="header">Number</div>
+		<div class="header">Result</div>
+	</div>
+
+	<% @numbers.each do |number| %>
+		<div class="row">
+			<div class="cell"> <%= number.id %> </div>
+			<div class="cell"> <%= number.result %> </div>
+		</div>
+	<% end %>
+
+</div>
