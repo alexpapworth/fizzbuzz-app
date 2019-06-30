@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   delete 'session/destroy'
   resources :user
 
+  get 'page_size', to: 'welcome#page_size', as: 'page_size'
   root 'welcome#index'
-  
+
 end
