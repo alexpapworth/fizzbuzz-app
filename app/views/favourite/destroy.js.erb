@@ -1,1 +1,1 @@
-document.querySelector(".container").innerHTML = '<%= escape_javascript(render template: "welcome/index", formats: "html") %>'
+document.querySelector("#number_<%= @number.id %>").innerHTML = '<%= escape_javascript( render partial: "welcome/row", formats: "html", locals: { number: @number } ) %>'

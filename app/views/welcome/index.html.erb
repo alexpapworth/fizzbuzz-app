@@ -9,17 +9,8 @@
 	</div>
 
 	<% @numbers.each do |number| %>
-		<div class="row">
-			<div class="cell"> 
-				<% if number.users.include? @current_user %>
-					<%= button_to "⭐️", favourite_destroy_path, method: :delete, params: {number_id: number.id}, remote: true %> 
-				<% else %>
-					<%= button_to "⭐️", favourite_create_path, method: :post, params: {number_id: number.id}, remote: true %> 
-				<% end %>
-			</div>
-			<div class="cell"> <%= number.id %> </div>
-			<div class="cell"> <%= number.result %> </div>
-			<div class="cell"> <%= number.favourites.count %> </div>
+		<div class="row" id="number_<%= number.id %>">
+			<%= render partial: "welcome/row", formats: "html", locals: { number: number } %>
 		</div>
 	<% end %>
 

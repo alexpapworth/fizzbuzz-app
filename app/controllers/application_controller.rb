@@ -16,5 +16,7 @@ class ApplicationController < ActionController::Base
 			end unless Session.find_by_auth_token( token )
 		end
 
+		PseudoNumber = Struct.new(:id, :result, :favourites, :users)
+		
 		helper_method :current_user
 end
