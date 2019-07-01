@@ -3,6 +3,6 @@ class UserController < ApplicationController
   	@current_user = User.create(name: helpers.generate_username)
   	create_session(@current_user)
 
-  	respond_to :js
+  	redirect_to root_url
   end
 end

@@ -12,6 +12,6 @@ class SessionController < ApplicationController
   	cookies.delete(:auth_token)
   	session.destroy
 
-	  respond_to :js
+	  redirect_to root_url
   end
 end
