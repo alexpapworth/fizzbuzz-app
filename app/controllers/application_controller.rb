@@ -18,5 +18,14 @@ class ApplicationController < ActionController::Base
 
 		PseudoNumber = Struct.new(:id, :result, :favourites, :users)
 		
+		def generate_numbers start_number, end_number
+			@numbers = []
+			start_number.upto(end_number) do |number|
+				@numbers << ( Number.find_by( id: number ) ? Number.find_by( id: number ) : PseudoNumber.new(
+					number, helpers.check_fizzbuzz(number), [], []
+				) )
+			end
+		end
+		
 		helper_method :current_user
 end
