@@ -13,3 +13,164 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+ 	margin: 0;
+ 	font-family: Helvetica Neue, Arial, san-serif;
+}
+
+header {
+	width: 100%;
+	background-color: #eee;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.title {
+	display: inline-block;
+	padding: 20px;
+	margin: 0;
+		color: #000;
+	font-size: 26px;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.header-options {
+	display: inline-block;
+	float: right;
+	padding: 25px 20px;
+	justify-self: end;
+}
+
+.sign-up {
+	font-size: 22px;
+}
+
+.container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* --- Index --- */
+
+.top-section {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-top: 20px;
+}
+
+.page-size {
+	justify-self: end;
+	margin: 22px 0px;
+}
+
+#size {
+	min-width: 50px;
+    background-color: #eee;
+    border: 2px solid #ccc;
+    font-size: 16px;
+}
+
+.grid-table {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.row {
+	display: grid;
+	grid-template-columns: 1fr 2fr 2fr 1fr;
+}
+
+.row:nth-child(even) {
+	background-color: #eee;
+}
+
+.row:nth-child(odd) {
+	background-color: #ddd;
+}
+
+.row:hover {
+	background-color: #bbb;
+}
+
+.header {
+	font-weight: 700;
+	padding: 10px 5px;
+	text-align: center;
+}
+
+.cell {
+	text-align: center;
+	border: 1px solid #ccc;
+	padding: 5px;
+}
+
+.star {
+	border: none;
+    margin: 0;
+    padding: 0;
+    background: none;
+}
+
+.star .label {
+	margin: 1px;
+    font-size: 23px;
+    border-radius: 100px;
+    border: 1px solid #bbb;
+    background-color: #ccc;
+    width: 40px;
+    height: 40px;
+    line-height: 42px;
+    cursor: pointer;
+}
+
+.star.active .label, .star:hover .label {
+	background-color: #aaa;
+	border-color: #333;
+}
+
+/* --- pagination --- */
+
+.pagination {
+	margin: 20px auto 40px;
+	text-align: center
+}
+
+.page {
+	min-width: 50px;
+    background-color: #eee;
+    border: 2px solid #ccc;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 5px 2px;
+    text-decoration: none;
+    color: #000;
+    display: inline-block;
+    padding: 5px 8px;
+    line-height: normal;
+    letter-spacing: 1px;
+}
+
+.page.active {
+	background-color: #bbb;
+	border-color: #ccc;
+}
+
+.pagination .button_to {
+	display: inline-block;
+}
+
+/* --- footer --- */
+
+footer {
+	height: 100px;
+    background-color: #eee;
+}
+
+@media screen and (max-width: 970px) {
+	.container {
+    	width: 90%;
+    }
+}

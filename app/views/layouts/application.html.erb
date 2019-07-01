@@ -10,6 +10,19 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <%= link_to "Fizzbuzz", root_path, class: "title" %>
+      <div class="header-options">
+        <%= render partial: "user/current_user", formats: "html" %>
+      </div>
+    </header>
+      
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <footer>
+
+    </footer>
   </body>
 </html>
