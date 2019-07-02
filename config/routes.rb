@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   get 'session/new'
   post 'session/create'
   delete 'session/destroy'
-  resources :user
+  
+  post 'user/create'
 
   get 'page_size', to: 'welcome#page_size', as: 'page_size'
   root 'welcome#index'

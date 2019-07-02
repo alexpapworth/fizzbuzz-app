@@ -1,5 +1,8 @@
 class SessionController < ApplicationController
 
+  def new
+  end
+
   def create
   	@current_user = User.find_by_name(params[:name])
   	create_session(@current_user)
