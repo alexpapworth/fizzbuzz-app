@@ -31,8 +31,7 @@ To create a new account, click the Sign Up button. The app doesn't use passwords
 ![Image of sign up action](public/readme/sign-up.png)
 
 ### Login and out
-Once an account is signed up, you can log into it again by entering the name. Or, select a user from the list.
-Note that the same user can be logged into multiple browsers at once. Sessions persist on each browser until you log out, or clear your cookies. Shut down the browser to test it out!
+Once an account is signed up, you can log into it again by entering the name. Note that the same user can be logged into multiple browsers at once. Sessions persist on each browser until you log out, or clear your cookies. Shut down the browser to test it out!
 
 ![Image of browser shutdown](public/readme/close-browser.png)
 
@@ -42,7 +41,7 @@ Click the star to favourite a number. This will persit between logins. You can s
 ![Animation of favouriting number](public/readme/favourite.gif)
 
 ### User hover
-If you hover on the tally, you'll see a list of which users favourited the number!
+If you hover on the tally, you'll see a list of which users favourited the number.
 
 ![Image of hover tooltip](public/readme/users-who-favourited.png)
 
@@ -84,4 +83,4 @@ rails test test/controller/
 
 This app comes with a companion API! It's written with NodeJS and can be found over in the [fizzbuzz-api](https://github.com/alexpapworth/fizzbuzz-api) repo.
 
-You can do cool things like authenticating a session, and favouriting/unfavouriting numbers as that user. It even has extra features like being able to specify a username when creating a user!
+You can do cool things like authenticating a session, and favouriting/unfavouriting numbers as that user. It has extra features like being able to specify a username when creating a user.
