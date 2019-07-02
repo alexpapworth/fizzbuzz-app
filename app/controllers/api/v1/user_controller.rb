@@ -28,7 +28,7 @@ class Api::V1::UserController < ApplicationController
 		elsif params[:flag] == "name"
 			user = User.find_by_name( params[:value] )
 		end
-		user.destroy
+		user.destroy unless user.nil?
 		render json: []
 	end
 end
