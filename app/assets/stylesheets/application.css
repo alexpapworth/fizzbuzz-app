@@ -47,6 +47,38 @@ header {
 	font-size: 22px;
 }
 
+.sign-up + .log-in {
+	margin-left:10px;
+	font-size: 22px;
+}
+
+.login-box {
+    margin-top: 30px;
+    margin-bottom: 110px;
+    text-align: center;
+}
+
+.login-box label[for="name"] {
+	font-size: 21px;
+	margin-bottom: 10px;
+}
+.login-box input[type="text"] {
+    width: 300px;
+    height: 40px;
+    font-size: 21px;
+    margin-top: 10px;
+}
+
+.login-box input[type="submit"] {
+	margin-top: 20px;
+    width: 200px;
+    height: 30px;
+    font-size: 21px;
+    border: 1px solid #000;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 .container {
     width: 100%;
     max-width: 960px;
@@ -107,11 +139,42 @@ header {
 	padding: 5px;
 }
 
+.hover-container {
+	display: block;
+	position:relative;
+	cursor: pointer;
+}
+
+.favourite-count:hover + .list-of-users {
+	display: block;
+}
+
+.list-of-users {
+	position: absolute;
+	display: none;
+	background-color: #fbfbfb;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 2px solid #aaa;
+    z-index: 1;
+    left: 20px;
+    top: 28px;
+}
+
 .star {
 	border: none;
-    margin: 0;
+    margin: 1px;
     padding: 0;
     background: none;
+}
+
+.star.active:hover {
+	margin: 1px;
+}
+
+.star.active:hover .label {
+	font-size: 23px;
 }
 
 .star .label {
@@ -120,8 +183,15 @@ header {
     cursor: pointer;
 }
 
+.star:hover {
+	margin: 0px;
+}
+
 .star.active .label, .star:hover .label {
 	filter: grayscale(0%);
+}
+
+.star:hover .label {
 	font-size: 25px;
 }
 
