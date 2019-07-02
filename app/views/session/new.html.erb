@@ -1,8 +1,8 @@
-<%= form_tag session_create_path, method: :post, remote: true do |form| %>
+<%= form_tag session_create_path, method: :post, remote: true, class: "login-box" do |form| %>
 	<div class="error_messages">	</div>
 
 	<div class="field padding">
-		<%= label_tag :name %>
+		<%= label_tag :name, "Username:" %><br/>
 		<%= text_field_tag :name, params[:name], autocomplete: "name" %>
 	</div>
 

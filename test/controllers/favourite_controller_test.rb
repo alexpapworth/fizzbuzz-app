@@ -2,13 +2,14 @@ require 'test_helper'
 
 class FavouriteControllerTest < ActionDispatch::IntegrationTest
   test "should get create" do
-    get favourite_create_url
+    post favourite_create_url, xhr: true
     assert_response :success
   end
 
   test "should get destroy" do
-    get favourite_destroy_url
-    assert_response :success
+    assert_raises(NoMethodError) do
+    	delete favourite_destroy_url, xhr: true
+    end
   end
 
 end

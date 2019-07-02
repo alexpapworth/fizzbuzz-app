@@ -2,12 +2,20 @@ class Api::V1::FavouriteController < ApplicationController
 	skip_before_action :verify_authenticity_token
 
 	def show
-		if params[:flag] == "id"
-			user = User.find_by_id( params[:value] )
-			render json: user.nil? ? [] : user.favourites
-		elsif params[:flag] == "name"
-			user = User.find_by_name( params[:value] )
-			render json: user.nil? ? [] : user.favourites
+		if params[:flag] == "id" || params[:flag] == "name"
+			if params[:flag] == "id"
+				user = User.find_by_id( params[:value] )
+			elsif params[:flag] == "name"
+				user = User.find_by_name( params[:value] )
+			end
+
+			if user.nil?
+				render_user = []
+			else
+				render_user = user.as_json
+				render_user["favourites"] = user.favourites.as_json
+			end
+			render json: render_user
 		elsif params[:flag] == "number"
 			number = Number.find_by_id( params[:value] )
 			render json: number.nil? ? [] : number.favourites
@@ -19,7 +27,6 @@ class Api::V1::FavouriteController < ApplicationController
 				user["favourites"] = @current_user.favourites.as_json
 			end
 			render json: user
-			# current user
 		end
 	end
 

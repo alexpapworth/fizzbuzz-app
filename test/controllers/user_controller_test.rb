@@ -2,7 +2,7 @@ require 'test_helper'
 
 class UserControllerTest < ActionDispatch::IntegrationTest
   test "should get create" do
-    get user_create_url
+    post user_create_url, xhr: true
     assert_response :success
   end
 

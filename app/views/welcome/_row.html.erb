@@ -11,4 +11,19 @@
 </div>
 <div class="cell number"> <%= number.id %> </div>
 <div class="cell"> <%= number.result %> </div>
-<div class="cell"> <%= number.favourites.count %> </div>
+<div class="cell">
+	<% if number.favourites.count == 0 %>
+		0
+	<% else %>
+		<div class="hover-container">
+			<div class="favourite-count">
+				<%= number.favourites.count %>
+			</div>
+			<div class="list-of-users">
+				<% number.users.each do |user| %>
+					<div><%= user.name %></div>
+				<% end %>
+			</div>
+		</div>
+	<% end %>
+</div>
