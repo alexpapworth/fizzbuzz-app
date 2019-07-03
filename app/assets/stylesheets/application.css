@@ -28,7 +28,7 @@ header {
 
 .title {
 	display: inline-block;
-	padding: 20px;
+	padding: 26px;
 	margin: 0;
 		color: #000;
 	font-size: 26px;
@@ -229,8 +229,14 @@ header {
 /* --- footer --- */
 
 footer {
-	height: 100px;
+	text-align: center;
+	padding: 40px;
     background-color: #eee;
+}
+
+footer a {
+	color: #000;
+    text-decoration: none;
 }
 
 @media screen and (max-width: 970px) {
