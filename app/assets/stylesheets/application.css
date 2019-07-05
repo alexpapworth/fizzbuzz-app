@@ -141,6 +141,10 @@ header {
 	cursor: pointer;
 }
 
+.favourite-count:hover + .list-of-users {
+	display: block;
+}
+
 .list-of-users {
 	position: absolute;
 	display: none;
@@ -159,6 +163,10 @@ header {
     margin: 1px;
     padding: 0;
     background: none;
+}
+
+.star.active .label {
+	filter: grayscale(0%);
 }
 
 .star .label {
@@ -216,10 +224,6 @@ footer a {
 		background-color: #bbb;
 	}
 
-	.favourite-count:hover + .list-of-users {
-		display: block;
-	}
-
 	.star.active:hover {
 		margin: 1px;
 	}
@@ -232,7 +236,7 @@ footer a {
 		margin: 0px;
 	}
 
-	.star.active .label, .star:hover .label {
+	.star:hover .label {
 		filter: grayscale(0%);
 	}
 
@@ -245,4 +249,13 @@ footer a {
 	.container {
     	width: 90%;
     }
+
+    .list-of-users {
+		right: 20px;
+		left: auto;
+    }
+
+    .header-options {
+	    padding: 33px 20px 33px 0px;
+	}
 }
