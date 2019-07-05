@@ -123,10 +123,6 @@ header {
 	background-color: #ddd;
 }
 
-.row:hover {
-	background-color: #bbb;
-}
-
 .header {
 	font-weight: 700;
 	padding: 10px 5px;
@@ -169,30 +165,14 @@ header {
     background: none;
 }
 
-.star.active:hover {
-	margin: 1px;
-}
-
-.star.active:hover .label {
-	font-size: 23px;
+.star.active .label {
+	filter: grayscale(0%);
 }
 
 .star .label {
     font-size: 23px;
     filter: grayscale(100%);
     cursor: pointer;
-}
-
-.star:hover {
-	margin: 0px;
-}
-
-.star.active .label, .star:hover .label {
-	filter: grayscale(0%);
-}
-
-.star:hover .label {
-	font-size: 25px;
 }
 
 /* --- pagination --- */
@@ -239,8 +219,43 @@ footer a {
     text-decoration: none;
 }
 
+@media screen and (min-width: 970px) {
+	.row:hover {
+		background-color: #bbb;
+	}
+
+	.star.active:hover {
+		margin: 1px;
+	}
+
+	.star.active:hover .label {
+		font-size: 23px;
+	}
+
+	.star:hover {
+		margin: 0px;
+	}
+
+	.star:hover .label {
+		filter: grayscale(0%);
+	}
+
+	.star:hover .label {
+		font-size: 25px;
+	}
+}
+
 @media screen and (max-width: 970px) {
 	.container {
     	width: 90%;
     }
+
+    .list-of-users {
+		right: 20px;
+		left: auto;
+    }
+
+    .header-options {
+	    padding: 33px 20px 33px 0px;
+	}
 }

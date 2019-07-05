@@ -6,7 +6,7 @@ class WelcomeController < ApplicationController
 		@page = params[:page] ? params[:page].to_i : 1
 		@size = params[:size] ? params[:size].to_i : 100
 
-		@page = 99999999999 if @page > 100000000000
+		@page = 1000000000 if @page > 1000000000
 		@size = 100 if @size > 250 
 
 		end_number = @page * @size

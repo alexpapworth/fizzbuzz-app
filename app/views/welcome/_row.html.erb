@@ -9,7 +9,7 @@
 		<% end %>
 	<% end %>
 </div>
-<div class="cell number"> <%= number.id %> </div>
+<div class="cell number"> <%= number_with_delimiter(number.id) %> </div>
 <div class="cell"> <%= number.result %> </div>
 <div class="cell">
 	<% if number.favourites.count == 0 %>
