@@ -29,8 +29,8 @@
 			<% 1.upto(9) do |page| %>
 				<%= link_to number_with_delimiter(page.to_s), root_path(page: page, size: @size), class: "page #{"active" if @page == page}" %>
 			<% end %>
-		<% elsif @page + 5 > 100000000000 %>
-			<% 99999999991.upto(100000000000) do |page| %>
+		<% elsif @page + 5 > 1000000000 %>
+			<% 999999991.upto(1000000000) do |page| %>
 				<%= link_to number_with_delimiter(page.to_s), root_path(page: page, size: @size), class: "page #{"active" if @page == page}" %>
 			<% end %>
 		<% else %>
@@ -39,9 +39,9 @@
 			<% end %>
 		<% end %>
 
-		<% if @page < 99999999995 %> 
+		<% if @page < 999999995 %>
 			..
-			<%= link_to "100,000,000,000", root_path(page: 100000000000, size: @size), class: "page" %>
+			<%= link_to "1,000,000,000", root_path(page: 1000000000, size: @size), class: "page" %>
 		<% end %>
 	</div>
 </div>

@@ -123,10 +123,6 @@ header {
 	background-color: #ddd;
 }
 
-.row:hover {
-	background-color: #bbb;
-}
-
 .header {
 	font-weight: 700;
 	padding: 10px 5px;
@@ -143,10 +139,6 @@ header {
 	display: block;
 	position:relative;
 	cursor: pointer;
-}
-
-.favourite-count:hover + .list-of-users {
-	display: block;
 }
 
 .list-of-users {
@@ -169,30 +161,10 @@ header {
     background: none;
 }
 
-.star.active:hover {
-	margin: 1px;
-}
-
-.star.active:hover .label {
-	font-size: 23px;
-}
-
 .star .label {
     font-size: 23px;
     filter: grayscale(100%);
     cursor: pointer;
-}
-
-.star:hover {
-	margin: 0px;
-}
-
-.star.active .label, .star:hover .label {
-	filter: grayscale(0%);
-}
-
-.star:hover .label {
-	font-size: 25px;
 }
 
 /* --- pagination --- */
@@ -237,6 +209,36 @@ footer {
 footer a {
 	color: #000;
     text-decoration: none;
+}
+
+@media screen and (min-width: 970px) {
+	.row:hover {
+		background-color: #bbb;
+	}
+
+	.favourite-count:hover + .list-of-users {
+		display: block;
+	}
+
+	.star.active:hover {
+		margin: 1px;
+	}
+
+	.star.active:hover .label {
+		font-size: 23px;
+	}
+
+	.star:hover {
+		margin: 0px;
+	}
+
+	.star.active .label, .star:hover .label {
+		filter: grayscale(0%);
+	}
+
+	.star:hover .label {
+		font-size: 25px;
+	}
 }
 
 @media screen and (max-width: 970px) {
