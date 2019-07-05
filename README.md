@@ -1,6 +1,10 @@
 # Fizzbuzz app
 
-## Usage
+## Demo
+
+For an easily accessible demo, check out the app on Heroku! https://fizzbuzz-rails-app.herokuapp.com/
+
+## Install
 
 Clone this project.
 
@@ -36,7 +40,7 @@ Once an account is signed up, you can log into it again by entering the name. No
 ![Image of browser shutdown](public/readme/close-browser.png)
 
 ### Favourite a number
-Click the star to favourite a number. This will persit between logins. You can see a tally of how many users favourited a number on the last column.
+Click the star to favourite a number. This will persist between logins. You can see a tally of how many users favourited a number on the last column.
 
 ![Animation of favouriting number](public/readme/favourite.gif)
 
